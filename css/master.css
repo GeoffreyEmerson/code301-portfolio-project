@@ -1,0 +1,84 @@
+/* TODO: Add styling */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+
+img {
+  width: 90%;
+  margin: 5%;
+  box-shadow: 0 0 5px 5px #333;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.top-section {
+  text-align: center;
+}
+
+.top-section img {
+  width: 50%;
+}
+
+.about-section {
+  background-color: #ccc;
+  padding: 10px 0;
+}
+
+.about-section p {
+  margin: 5%;
+}
+
+.project-section li {
+  border-top: 1px black dashed;
+}
+
+.contact-section {
+  background-color: #ccc;
+  padding: 10px 0 30px;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact-list div {
+  text-align: center;
+  width: 30%;
+  margin: 0 5%;
+}
+
+
+.contact-list a {
+  text-decoration: none;
+}
+
+.contact-list button {
+  color: #ccc;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #888;
+    background-color: #333;
+    box-shadow: 2px 2px 5px 0px black;
+}
+
+footer {
+  color: #ccc;
+  background-color: #555;
+  text-align: center;
+  padding: 10px;
+}
