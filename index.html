@@ -15,8 +15,11 @@
           <li class="projectBox">
             <h3>{{title}}</h3>
             <h5>{{date}}</h5>
+            <h6>({{ago}} ago)</h6>
             <figure>
-              <img src="{{imageUrl}}" alt="{{mageAlt}}">
+              <a href="{{projectUrl}}" target="_blank">
+                <img src="{{imageUrl}}" alt="{{mageAlt}}">
+              </a>
               <figcaption>{{caption}}</figcaption>
             </figure>
           </li>
