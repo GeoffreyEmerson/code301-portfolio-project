@@ -1,4 +1,4 @@
-projects = [
+var projects = [
   {
     title: '201 Final Project',
     imageUrl: 'img/201final.png',

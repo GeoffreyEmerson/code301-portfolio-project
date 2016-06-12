@@ -16,57 +16,65 @@ img {
 }
 
 ul {
-  padding: 0;
+  padding: 0 15px 15px;
 }
 
 li {
   list-style: none;
+  color: white;
 }
 
-.top-section {
+.projectBox {
+  margin: 20px;
+  background-color: #007;
+  border: 1px solid white;
+  box-shadow: 0 0 5px 5px #333;
+}
+
+.projectBox img {
+  box-shadow: 0 0 5px 5px #fff;
+}
+
+.topSection {
   text-align: center;
 }
 
-.top-section img {
+.topSection img {
   width: 50%;
 }
 
-.about-section {
+.aboutSection {
   background-color: #ccc;
   padding: 10px 0;
 }
 
-.about-section p {
+.aboutSection p {
   margin: 5%;
 }
 
-.project-section li {
-  border-top: 1px black dashed;
-}
-
-.contact-section {
+.contactSection {
   background-color: #ccc;
   padding: 10px 0 30px;
 }
 
-.contact-list {
+.contactList {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.contact-list div {
+.contactList div {
   text-align: center;
   width: 30%;
   margin: 0 5%;
 }
 
 
-.contact-list a {
+.contactList a {
   text-decoration: none;
 }
 
-.contact-list button {
+.contactList button {
   color: #ccc;
     width: 100%;
     margin: 10px 0;
