@@ -9,26 +9,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/project-array.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/x-handlebars-template" id="projectTemplate">
-
-    </script>
   </head>
   <body>
     <nav>
-      <!-- TODO: Add navbar -->
+      <div id="hamburger"><img src="img/menu.svg" alt="" class="icon"></img></div>
+      <input id="menuCheckbox" type="checkbox"></input>
+      <ul id="menu">
+        <li id="topNav"><a href="#">Top</a></li>
+        <li id="aboutNav"><a href="#about">About Geoff</a></li>
+        <li id="projectsNav"><a href="#projects">Geoff's Projects</a></li>
+        <li id="contactMav"><a href="#contact">Contact Geoff</a></li>
+      </ul>
     </nav>
     <article class="topSection">
-      <img src="img/headshot.jpg" alt="A photo of Geoffrey Emerson" />
+      <img src="img/headshot.jpg" alt="A photo of Geoffrey Emerson" class="shadowed" />
       <h1>Geoffrey Emerson</h1>
       <h3>Web Designer</h3>
       <h4>Full Stack - JavaScript, Ruby, PHP</h4>
     </article>
-    <aside class="aboutSection">
+    <aside class="aboutSection" id="about">
       <h3>About Geoff</h3>
       <p>Geoffrey Emerson is a full stack web developer currently residing in Portland, Oregon. He started programming for fun at a very young age, and in 2015 decided to make the switch from hobbyist to professional. Geoff has experience in JavaScript, Ruby on Rails, PHP, Python, and enjoys learning new languages.</p>
       <p>Over the years he has also studied Basic, Pascal, C, C++, C# for Xbox, and Objective-C for iOS. While he took some programming classes for fun in college, he majored in Theatre Arts with an emphasis Acting and Musical Theatre. But what he really wants to do is direct!</p>
     </aside>
-    <div id="projectSection">
+    <div id="projects">
       <h3>Recent Projects</h3>
       <article class="projectBox template" id="articleTemplate">
         <h3>title</h3>
@@ -36,13 +40,15 @@
         <h6>(relativeTimestamp ago)</h6>
         <figure>
           <a id="projectUrl" href="" target="_blank">
-            <img id="imageUrl" src="" alt="mageAlt">
+            <img id="imageUrl" src="" alt="mageAlt" class="shadowed">
           </a>
           <figcaption></figcaption>
         </figure>
       </article>
+      <div id="projectSection" class="flexProjects">
+      </div>
     </div>
-    <article class="contactSection">
+    <article class="contactSection" id="contact">
       <h1>Contact Me</h1>
       <div class="contactList">
         <div><a href="https://www.linkedin.com/in/GeoffreyEmerson"><button type="button" name="button">LinkedIn</button></a></div>
