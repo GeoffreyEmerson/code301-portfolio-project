@@ -2,18 +2,25 @@
 $(document).ready(function() {
   // Build object from saved data
   var data = {
-    projectArray: []
+    projectArray: [],
+    compileTemplate: function(templateHtml) {
+      this.handlebarsFunc = Handlebars.compile(templateHtml);
+    }
   };
+
   for (var i = 0; i < projects.length; i++) {
     data.projectArray.push(new Project(projects[i]));
   }
 
-  // Go through each object in the array, attach it to the DOM
+  // Prep Handlebars
+  data.compileTemplate($('#articleTemplate').html());
+
+  // Go through each project in the array, attach it to the DOM
   for (var i = 0; i < data.projectArray.length; i++) {
-    data.projectArray[i].toHtml($('#articleTemplate'),$('#projectSection'));
+    data.projectArray[i].toHtml(data, $('#projectSection'));
   }
 
-  displayPage('#home');
+  displayPage('#projects'); // starting view
   setListeners();
 });
 
@@ -38,17 +45,10 @@ function Project(passedObject) {
   this.relativeTimestamp;
 }
 
-Project.prototype.toHtml = function(templateElement,appendDiv) {
-  var $tempClone = templateElement.clone();
-  $tempClone.find('h3').text(this.title);
-  $tempClone.find('h5').text(this.date);
-  this.updateRelativeTimestamp();
-  $tempClone.find('h6').text('(' + this.relativeTimestamp + ' ago)');
-  $tempClone.find('#projectUrl').attr('href', this.projectUrl);
-  $tempClone.find('#imageUrl').attr('src', this.imageUrl);
-  $tempClone.find('figcaption').text(this.caption);
-  $tempClone.removeClass('template');
-  appendDiv.append($tempClone);
+Project.prototype.toHtml = function(parentObj, appendDiv) {
+  this.updateRelativeTimestamp(); // gotta have these up to date!
+  var articleHtml = parentObj.handlebarsFunc(this); // the template function is stored in the parent. I'll probably change this when I have the time to be on the object prototype.
+  appendDiv.append(articleHtml); // attach the filled out template
 }; // End of toHtml()
 
 Project.prototype.updateRelativeTimestamp = function() {
