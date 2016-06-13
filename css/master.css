@@ -9,7 +9,11 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
 }
 
-img {
+a {
+  text-decoration: none;
+}
+
+img.shadowed {
   width: 90%;
   margin: 5%;
   box-shadow: 0 0 5px 5px #333;
@@ -24,6 +28,7 @@ li {
 }
 
 .top-section {
+  margin:20px;
   text-align: center;
 }
 
@@ -38,10 +43,7 @@ li {
 
 .about-section p {
   margin: 5%;
-}
-
-.project-section li {
-  border-top: 1px black dashed;
+  font-size: 2vmax;
 }
 
 .contact-section {
@@ -81,4 +83,126 @@ footer {
   background-color: #555;
   text-align: center;
   padding: 10px;
+}
+
+#menu {
+  display: block;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  margin-top: -100vh;
+  z-index: 1;
+  transition: transform 0.5s ease-in;
+  -webkit-transition: transform 0.5s ease-in;
+}
+
+#menu li {
+  padding: 10%;
+  font-size: 200%;
+  background-color: #ddd;
+  border: 2px solid #444;
+  text-align: right;
+}
+
+#hamburger {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.icon {
+  max-height: 20px;
+  max-width: 20px;
+  margin: 5px
+}
+
+#menuCheckbox {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(3); /* IE */
+  -moz-transform: scale(3); /* FF */
+  -webkit-transform: scale(3); /* Safari and Chrome */
+  -o-transform: scale(3); /* Opera */
+  padding: 10px;
+  position: fixed;
+  top:10px;
+  left:10px;
+  z-index: 3;
+  opacity: 0;
+}
+
+#menuCheckbox:checked ~ #menu {
+  transform: translateY(100vh);
+  -webkit-transform: translateY(100vh);
+}
+
+#projects {
+  text-align: center !important;
+}
+
+.flexProjects {
+  display: flex;
+  flex-wrap: wrap;
+  /*text-align: center !important;*/
+  justify-content: space-around;
+}
+
+.flexProjects article {
+  display: inline-block;
+  max-width: 350px;
+  margin: auto;
+  flex-basis: auto;
+}
+
+.projectSection article {
+  border-top: 1px black dashed;
+}
+
+/*nav {
+  width: 100%;
+  background-color: black;
+  margin-top: 0;
+}*/
+
+@media only screen and (max-width:699px) {
+  #menu li:nth-child(even) {
+    background-color: #aaa;
+  }
+}
+
+/* Tablet-width CSS Settings */
+
+@media only screen and (min-width: 700px) {
+  #menuCheckbox, #hamburger {
+    display: none;
+  }
+
+  #menu {
+    margin-top: 0;
+    height: 5%;
+    padding: 0;
+    background-color: #333;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #menu li {
+    display: inline-block;
+    width: 20%;
+    padding: 1%;
+    margin: 0;
+    font-size: 150%;
+    border: none;
+    text-align: center;
+    background-color: inherit;
+    color:white;
+  }
+
+  #menu a {
+    color: white;
+  }
+
 }
