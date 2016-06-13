@@ -12,7 +12,22 @@ $(document).ready(function() {
   for (var i = 0; i < data.projectArray.length; i++) {
     data.projectArray[i].toHtml($('#articleTemplate'),$('#projectSection'));
   }
+
+  displayPage('#home');
+  setListeners();
 });
+
+function displayPage(choice) {
+  $('.fullPage').fadeOut('500');
+  $(choice).delay('500').fadeIn('slow');
+}
+
+function setListeners() {
+  $('#menu').on('click', 'li', function(event){
+    event.preventDefault();
+    displayPage($(this).data('page'));
+  });
+}
 
 // Object constructor
 function Project(passedObject) {
