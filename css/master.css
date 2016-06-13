@@ -1,5 +1,3 @@
-/* TODO: Add styling */
-
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +5,14 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   text-align: center;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
+h6 {
+  margin-top: 0;
 }
 
 a {
@@ -20,55 +26,71 @@ img.shadowed {
 }
 
 ul {
-  padding: 0;
+  padding: 0 15px 15px;
 }
 
-li {
+.template {
+  display: none;
+}
+
+.projectBox {
   list-style: none;
+  color: white;
 }
 
-.top-section {
+.projectBox {
+  margin: 20px;
+  background-color: #007;
+  border: 1px solid white;
+  box-shadow: 0 0 5px 5px #333;
+}
+
+.projectBox img {
+  box-shadow: 0 0 5px 5px #fff;
+}
+
+.topSection {
   margin:20px;
   text-align: center;
 }
 
-.top-section img {
+.topSection img {
   width: 50%;
 }
 
-.about-section {
+.aboutSection {
   background-color: #ccc;
   padding: 10px 0;
 }
 
-.about-section p {
+.aboutSection p {
   margin: 5%;
-  font-size: 2vmax;
 }
 
-.contact-section {
+.contactSection {
+  font-size: 2vmax;
   background-color: #ccc;
   padding: 10px 0 30px;
 }
 
-.contact-list {
+.contactList {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.contact-list div {
+.contactList div {
   text-align: center;
   width: 30%;
   margin: 0 5%;
 }
 
 
-.contact-list a {
+.contactList a {
   text-decoration: none;
 }
 
-.contact-list button {
+.contactList button {
   color: #ccc;
     width: 100%;
     margin: 10px 0;
@@ -152,7 +174,7 @@ footer {
 .flexProjects article {
   display: inline-block;
   max-width: 350px;
-  margin: auto;
+  /*margin: inherit auto;*/
   flex-basis: auto;
 }
 
