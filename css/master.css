@@ -43,10 +43,7 @@ li {
 
 .about-section p {
   margin: 5%;
-}
-
-.project-section li {
-  border-top: 1px black dashed;
+  font-size: 2vmax;
 }
 
 .contact-section {
@@ -142,18 +139,25 @@ footer {
 }
 
 #projects {
-  text-align: center;
+  text-align: center !important;
 }
 
 .flexProjects {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  /*text-align: center !important;*/
+  justify-content: space-around;
 }
 
-.flexProjects li {
+.flexProjects article {
   display: inline-block;
   max-width: 350px;
+  margin: auto;
+  flex-basis: auto;
+}
+
+.projectSection article {
+  border-top: 1px black dashed;
 }
 
 /*nav {
