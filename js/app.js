@@ -18,8 +18,8 @@ $(document).ready(function() {
 });
 
 function displayPage(choice) {
-  $('.fullPage').hide();
-  $(choice).fadeIn('slow');
+  $('.fullPage').fadeOut('500');
+  $(choice).delay('500').fadeIn('slow');
 }
 
 function setListeners() {
