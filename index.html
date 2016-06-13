@@ -10,21 +10,7 @@
     <script type="text/javascript" src="js/project-array.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/x-handlebars-template" id="projectTemplate">
-      <ul>
-        {{#each projectArray}}
-          <li class="projectBox">
-            <h3>{{title}}</h3>
-            <h5>{{date}}</h5>
-            <h6>({{ago}} ago)</h6>
-            <figure>
-              <a href="{{projectUrl}}" target="_blank">
-                <img src="{{imageUrl}}" alt="{{mageAlt}}">
-              </a>
-              <figcaption>{{caption}}</figcaption>
-            </figure>
-          </li>
-        {{/each}}
-      </ul>
+
     </script>
   </head>
   <body>
@@ -42,13 +28,20 @@
       <p>Geoffrey Emerson is a full stack web developer currently residing in Portland, Oregon. He started programming for fun at a very young age, and in 2015 decided to make the switch from hobbyist to professional. Geoff has experience in JavaScript, Ruby on Rails, PHP, Python, and enjoys learning new languages.</p>
       <p>Over the years he has also studied Basic, Pascal, C, C++, C# for Xbox, and Objective-C for iOS. While he took some programming classes for fun in college, he majored in Theatre Arts with an emphasis Acting and Musical Theatre. But what he really wants to do is direct!</p>
     </aside>
-    <article class="projectSection">
+    <div id="projectSection">
       <h3>Recent Projects</h3>
-
-      <div id="projectList">
-
-      </div>
-    </article>
+      <article class="projectBox template" id="articleTemplate">
+        <h3>title</h3>
+        <h5>date</h5>
+        <h6>(relativeTimestamp ago)</h6>
+        <figure>
+          <a id="projectUrl" href="" target="_blank">
+            <img id="imageUrl" src="" alt="mageAlt">
+          </a>
+          <figcaption></figcaption>
+        </figure>
+      </article>
+    </div>
     <article class="contactSection">
       <h1>Contact Me</h1>
       <div class="contactList">
