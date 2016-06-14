@@ -35,12 +35,12 @@
       </ul>
     </nav>
     <article id="home" class="topSection fullPage">
-      <img src="img/headshot.jpg" alt="A photo of Geoffrey Emerson" class="shadowed" />
+      <img src="img/headshot.jpg" alt="A photo of Geoffrey Emerson" class="shadowed headshot" />
       <h1>Geoffrey Emerson</h1>
       <h3>Web Designer</h3>
       <h4>Full Stack - JavaScript, Ruby, PHP</h4>
     </article>
-    <article id="about" class="aboutSection fullPage">
+    <article id="about" class="fullPage">
       <h3>About Geoff</h3>
       <p>Geoffrey Emerson is a full stack web developer currently residing in Portland, Oregon. He started programming for fun at a very young age, and in 2015 decided to make the switch from hobbyist to professional. Geoff has experience in JavaScript, Ruby on Rails, PHP, Python, and enjoys learning new languages.</p>
       <p>Over the years he has also studied Basic, Pascal, C, C++, C# for Xbox, and Objective-C for iOS. While he took some programming classes for fun in college, he majored in Theatre Arts with an emphasis Acting and Musical Theatre. But what he really wants to do is direct!</p>
@@ -50,7 +50,7 @@
       <div id="projectSection" class="flexProjects">
       </div>
     </article>
-    <article id="contact" class="contactSection fullPage">
+    <article id="contact" class="fullPage">
       <h1>Contact Me</h1>
       <div class="contactList">
         <div><a href="https://www.linkedin.com/in/GeoffreyEmerson"><button type="button" name="button">LinkedIn</button></a></div>
@@ -60,5 +60,8 @@
       </div>
     </article>
     <footer>&copy; 2016 Geoffrey Emerson</footer>
+    <script>
+      Project.fetchAll();
+    </script>
   </body>
 </html>
