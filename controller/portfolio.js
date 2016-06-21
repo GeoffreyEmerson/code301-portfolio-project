@@ -1,29 +1,34 @@
-(function() {
+(function(module) {
 
   var Controller = {};
 
   // Initialize page after loading data
   Controller.initPage = function() {
-    allProjects(renderProjects);
-    displayPage('#home'); // starting view
-    setListeners(); // navbar listeners
-  };
-
-  function setListeners() {
-    $('#menu').on('click', 'li', function(event){
-      event.preventDefault();
-      displayPage($(this).data('page'));
-    });
-  };
-
-  function displayPage(choice) {
-    if (screen.width > 699 ) { // mobile view uses a single page scrolling view
-      $('.fullPage').fadeOut('500');
-      $(choice).delay('500').fadeIn('slow');
-    }
+    allProjects(ProjectView.renderProjects);
   };
 
   // Starts on pageload
   Controller.initPage();
 
-})();
+  Controller.index = function() {
+    ProjectView.displayPage('home');
+  };
+
+  Controller.about = function() {
+    ProjectView.displayPage('about');
+  };
+
+  Controller.projects = function() {
+    ProjectView.displayPage('projects');
+  };
+
+  Controller.contact = function() {
+    ProjectView.displayPage('contact');
+  };
+
+  Controller.notFound = function() {
+    ProjectView.displayPage('notFound'); // TODO: not made yet
+  };
+
+  module.Controller = Controller;
+})(window);
