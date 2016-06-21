@@ -9,5 +9,15 @@
     });
   }; // End of renderProjects()
 
+  ProjectView.displayPage = function(choice) {
+    if (screen.width > 699 ) { // mobile view uses a single page scrolling view
+      $('.fullPage').fadeOut('500');
+      $('#' + choice).delay('500').fadeIn('slow');
+    } else {
+      // TODO: scroll to section
+    }
+  };
+
   module.renderProjects = ProjectView.renderProjects;
+  module.displayPage = ProjectView.displayPage;
 })(window);
