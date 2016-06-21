@@ -18,6 +18,5 @@
     }
   };
 
-  module.renderProjects = ProjectView.renderProjects;
-  module.displayPage = ProjectView.displayPage;
+  module.ProjectView = ProjectView;
 })(window);
