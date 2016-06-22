@@ -5,6 +5,7 @@
   // Initialize page after loading data
   Controller.initPage = function() {
     allProjects(ProjectView.renderProjects);
+    repoView.index();
   };
 
   // Starts on pageload
