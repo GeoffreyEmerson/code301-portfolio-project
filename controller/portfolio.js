@@ -8,9 +8,6 @@
     repoView.index();
   };
 
-  // Starts on pageload
-  Controller.initPage();
-
   Controller.index = function() {
     ProjectView.displayPage('home');
   };
@@ -33,3 +30,8 @@
 
   module.Controller = Controller;
 })(window);
+
+$(document).ready(function() {
+  // Starts on pageload
+  Controller.initPage();
+});
