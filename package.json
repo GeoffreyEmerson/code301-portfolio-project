@@ -1,0 +1,31 @@
+{
+  "name": "project-portfolio",
+  "version": "1.0.0",
+  "description": "Geoffrey Emerson's Portfilio Project for Code Fellows 301 June 2016",
+  "main": "index.html",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoffreyEmerson/code301-portfolio-project.git"
+  },
+  "keywords": [
+    "portfolio",
+    "demo",
+    "class",
+    "school"
+  ],
+  "author": "Geoffrey Emerson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoffreyEmerson/code301-portfolio-project/issues"
+  },
+  "homepage": "https://github.com/GeoffreyEmerson/code301-portfolio-project#readme"
+}
